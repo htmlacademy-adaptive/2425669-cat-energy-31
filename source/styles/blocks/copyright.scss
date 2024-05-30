@@ -1,0 +1,22 @@
+.copyright::after {
+  content: "";
+  display: block;
+  min-width: 27px;
+  min-height: 34px;
+  background-color: #666666;
+  mask-image: url("../../icons/stack.svg#html-academy");
+  mask-repeat: no-repeat;
+  mask-position: right;
+}
+
+.copyright:hover::after {
+  background-color: $bg-basic-green;
+}
+
+.copyright:hover:focus-visible {
+  background-color: $bg-basic-green;
+}
+
+.copyright:active {
+  opacity: 0.3;
+}

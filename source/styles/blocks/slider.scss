@@ -1,0 +1,125 @@
+.slider__foto {
+  height: 256px;
+  display: block;
+  max-width: 280px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 560px;
+    height: 512px;
+  }
+}
+
+.slider__content-before {
+  width: 140px;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    width: 280px;
+  }
+}
+
+.slider__foto-after {
+  transform: translateX(-50%);
+}
+
+.slider__content-after {
+  width: 140px;
+  overflow-x: hidden;
+
+  @media (min-width: $tablet-width) {
+    width: 280px;
+  }
+}
+
+.slider__curtain {
+  display: block;
+  width: 4px;
+  height: 100%;
+  position: absolute;
+  background-color: #666666;
+  border: none;
+  border-radius: 2px;
+  z-index: 1;
+  padding: 0;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    left: 280px;
+  }
+}
+
+.slider__curtain:hover {
+  background: $bg-basic-green;
+}
+
+.slider__curtain:focus-visible {
+  background: $bg-basic-green;
+}
+
+.slider__curtain:active {
+  background: rgba(94, 170, 47, 0.6);
+}
+
+.slider__curtain::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 2px solid #666666;
+  left: 50%;
+  top: 50%;
+  transform: translate(-18px, 10px);
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    top: 230px;
+  }
+}
+
+.slider__curtain:hover::before {
+  border: 2px solid $bg-basic-green;
+}
+
+.slider__curtain:active::before {
+  border: 2px solid rgba(94, 170, 47, 0.6);
+}
+
+.slider__curtain:focus-visible::before {
+  border-color: $bg-basic-green;
+}
+
+.slider__curtain::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 18px;
+  background-color: #666666;
+  mask-image: url("../../icons/stack.svg#slider-arrows");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-10px, -19px);
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    top: 241px;
+  }
+}
+
+.slider__curtain:hover::after {
+  background-color: $bg-basic-green;
+}
+
+.slider__curtain:focus-visible::after {
+  background-color: $bg-basic-green;
+}
+
+.slider__curtain:active::after {
+  background-color: rgba(94, 170, 47, 0.6);
+}

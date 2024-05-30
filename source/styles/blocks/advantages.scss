@@ -1,0 +1,216 @@
+.advantages__wrapper {
+  min-width: 280px;
+  margin: 0;
+  padding: 0 20px 26px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 708px;
+    padding: 45px 30px 47px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1220px;
+    padding: 71px 0 69px;
+    margin: 0 auto;
+  }
+}
+
+.advantages__item-text {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.advantages__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    gap: 37px 135px;
+    flex-wrap: wrap;
+    counter-reset: number;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 74px;
+  }
+}
+
+.advantages__title {
+  @include font($secondary-font, 36px, 40px, $head-color);
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 42px;
+
+  @media (min-width: $tablet-width) {
+    @include font($secondary-font, 60px, 60px, $head-color);
+    margin-bottom: 32px;
+  }
+}
+
+.advantages__item {
+  @include font($primary-font, 14px, 18px, $base-color-text);
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    @include font($primary-font, 16px, 24px, $base-color-text);
+    min-height: 280px;
+    width: 249px;
+    flex-direction: column;
+    padding-top: 40px;
+    position: relative;
+    margin: 0;
+    gap: 32px;
+  }
+}
+
+.advantages__item-one::before {
+  content: "";
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  background-color: $bg-basic-green;
+  background-image: url("../../icons/stack.svg#advantages-one");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px 32px;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.advantages__item-two::before {
+  content: "";
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  background-color: $bg-basic-green;
+  background-image: url("../../icons/stack.svg#advantages-two");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px 28px;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.advantages__item-two {
+  @media (min-width: $desktop-width) {
+    padding-left: 2px;
+  }
+}
+
+.advantages__item-free::before {
+  content: "";
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  background-color: $bg-basic-green;
+  background-image: url("../../icons/stack.svg#advantages-free");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px 30px;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.advantages__item-free {
+  @media (min-width: $desktop-width) {
+    padding-left: 4px;
+  }
+}
+
+.advantages__item-for::before {
+  content: "";
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  background-color: $bg-basic-green;
+  background-image: url("../../icons/stack.svg#advantages-for");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 26px 31px;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.advantages__item-for {
+  @media (min-width: $tablet-width) {
+    width: 245px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 6px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .advantages__item-one::after {
+    @include font ($secondary-font, 280px, 280px, $bg-accent-color);
+    content: counter(number);
+    counter-increment: number;
+    display: block;
+    right: 25px;
+    top: 0;
+    z-index: -1;
+    position: absolute;
+  }
+
+  .advantages__item-two::after {
+    @include font ($secondary-font, 280px, 280px, $bg-accent-color);
+    content: counter(number);
+    counter-increment: number;
+    display: block;
+    right: 4px;
+    top: 0;
+    z-index: -1;
+    position: absolute;
+
+    @media (min-width: $desktop-width) {
+      right: 2px;
+    }
+  }
+
+  .advantages__item-free::after {
+    @include font ($secondary-font, 280px, 280px, $bg-accent-color);
+    content: counter(number);
+    counter-increment: number;
+    display: block;
+    right: 2px;
+    top: 0;
+    z-index: -1;
+    position: absolute;
+
+    @media (min-width: $desktop-width) {
+      right: -1px;
+    }
+  }
+
+  .advantages__item-for::after {
+    @include font ($secondary-font, 280px, 280px, $bg-accent-color);
+    content: counter(number);
+    counter-increment: number;
+    position: absolute;
+    display: block;
+    right: -4px;
+    top: 0;
+    z-index: -1;
+  }
+}

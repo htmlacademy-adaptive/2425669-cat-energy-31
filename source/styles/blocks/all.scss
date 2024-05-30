@@ -1,0 +1,92 @@
+.all__wrapper {
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 7px 20px 37px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 708px;
+    padding: 80px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 96px 0;
+  }
+}
+
+.all__offer {
+  @include font($secondary-font, 24px, 24px, $head-color);
+  font-weight: 400;
+  margin: 0;
+  padding-bottom: 32px;
+  width: fit-content;
+  background-color: #ffffff;
+  position: relative;
+  box-shadow: -40px 0 0 #ffffff, 40px 0 0 #ffffff;
+
+  @media (min-width: $tablet-width) {
+    @include font($secondary-font, 32px, 32px, $head-color);
+    padding-bottom: 66px;
+    width: fit-content;
+    margin-left: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font($secondary-font, 40px, 40px, $head-color);
+    padding-bottom: 72px;
+    width: fit-content;
+    margin: 0;
+  }
+}
+
+.all__offer::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  left: -50vw;
+  height: 2px;
+  background-color: $bg-basic-green;
+  box-shadow: 100vw 0 0 $bg-basic-green;
+  transform: translateY(10px);
+
+  @media (min-width: $tablet-width) {
+    transform: translateY(14px);
+  }
+
+  @media (min-width: $desktop-width) {
+    transform: translateY(16px);
+  }
+}
+
+.all__text {
+  @include font($secondary-font, 16px, 24px, $head-color);
+  text-align: center;
+  margin: 0;
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    @include font($secondary-font, 24px, 32px, $head-color);
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 21px;
+  }
+}
+
+.all__form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 280px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    gap: 0;
+    justify-content: center;
+  }
+}
